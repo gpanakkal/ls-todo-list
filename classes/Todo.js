@@ -38,17 +38,17 @@ class Todo {
   }
 }
 
-// const todo1 = new Todo('Buy milk');
-// const todo2 = new Todo('Clean room');
-// const todo3 = new Todo('Go to the gym');
+const todo1 = new Todo('Buy milk');
+const todo2 = new Todo('Clean room');
+const todo3 = new Todo('Go to the gym');
 
 // todo1.markDone();
 
-// console.log(todo1.toString());
-// console.log(todo2.toString());
-// console.log(todo3.toString());
+console.log(todo1.toString());
+console.log(todo2.toString());
+console.log(todo3.toString());
 
 // console.log(Object.keys(new Todo()));
 // console.log(Object.keys('3'));
 
-module.exports = { Todo };
+module.exports = Todo;

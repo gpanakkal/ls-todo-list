@@ -21,6 +21,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
+  plugins: ['jest'],
   rules: {
     'no-console': 'off',
     'no-debugger': 0,

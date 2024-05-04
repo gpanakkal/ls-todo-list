@@ -1,4 +1,4 @@
-const { Todo } = require('./Todo');
+const Todo = require('./Todo');
 
 class TodoList {
   constructor(title) {
@@ -132,4 +132,4 @@ list.add(todo6);
 // console.log(list);
 list.forEach((todo) => console.log(todo.toString()));
 
-module.exports = { TodoList };
+module.exports = TodoList;
