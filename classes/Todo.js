@@ -44,9 +44,9 @@ const todo3 = new Todo('Go to the gym');
 
 // todo1.markDone();
 
-console.log(todo1.toString());
-console.log(todo2.toString());
-console.log(todo3.toString());
+// console.log(todo1.toString());
+// console.log(todo2.toString());
+// console.log(todo3.toString());
 
 // console.log(Object.keys(new Todo()));
 // console.log(Object.keys('3'));

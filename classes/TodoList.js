@@ -9,7 +9,9 @@ class TodoList {
   add(...args) {
     const isTodo = (value) => value instanceof Todo;
     const validTodos = args.filter(isTodo);
+    if (validTodos.length === 0) throw new TypeError('No passed todos are Todo objects');
     this.todos.push(...validTodos);
+    return this;
   }
 
   size() {
@@ -25,7 +27,7 @@ class TodoList {
   }
 
   #validateIndex(index) {
-    if (!(index in this.todos)) throw new Error(`Index ${index} is invalid or out of range`);
+    if (!(index in this.todos)) throw new ReferenceError(`Index ${index} is invalid or out of range`);
   }
 
   itemAt(index) {
@@ -74,7 +76,6 @@ class TodoList {
     this.forEach((todo) => {
       if (test(todo)) matches.push(todo);
     });
-
     return new TodoList(this.title).add(...matches);
   }
 
@@ -130,6 +131,6 @@ list.add(todo5);
 list.add(todo6);
 
 // console.log(list);
-list.forEach((todo) => console.log(todo.toString()));
+// list.forEach((todo) => console.log(todo.toString()));
 
 module.exports = TodoList;
